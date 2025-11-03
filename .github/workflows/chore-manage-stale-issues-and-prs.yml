@@ -6,6 +6,7 @@ on:
 
 jobs:
   manage-stale:
+    timeout-minutes: 3
     runs-on: ubuntu-latest
     steps:
       - name: Manage stale issues and PRs

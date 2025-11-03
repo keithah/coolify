@@ -21,6 +21,7 @@ env:
 
 jobs:
   amd64:
+    timeout-minutes: 8
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -56,6 +57,7 @@ jobs:
             ${{ env.GITHUB_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.version.outputs.VERSION }}
 
   aarch64:
+    timeout-minutes: 8
     runs-on: [self-hosted, arm64]
     steps:
       - uses: actions/checkout@v4
@@ -91,6 +93,7 @@ jobs:
             ${{ env.GITHUB_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.version.outputs.VERSION }}-aarch64
 
   merge-manifest:
+    timeout-minutes: 8
     runs-on: ubuntu-latest
     permissions:
       contents: read

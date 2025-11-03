@@ -5,6 +5,7 @@ on:
       - labeled
 jobs:
   add-comment:
+    timeout-minutes: 8
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write

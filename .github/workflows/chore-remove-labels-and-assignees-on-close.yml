@@ -10,6 +10,7 @@ on:
 
 jobs:
   remove-labels-and-assignees:
+    timeout-minutes: 8
     runs-on: ubuntu-latest
     steps:
       - name: Remove labels and assignees

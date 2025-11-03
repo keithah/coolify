@@ -6,6 +6,7 @@ on:
 
 jobs:
   lock-threads:
+    timeout-minutes: 8
     runs-on: ubuntu-latest
     steps:
       - name: Lock threads after 30 days of inactivity

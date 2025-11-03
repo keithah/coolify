@@ -18,6 +18,7 @@ env:
 
 jobs:
   amd64:
+    timeout-minutes: 8
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -58,6 +59,7 @@ jobs:
             coolify.managed=true
 
   aarch64:
+    timeout-minutes: 8
     runs-on: [ self-hosted, arm64 ]
     permissions:
       contents: read
@@ -98,6 +100,7 @@ jobs:
             coolify.managed=true
 
   merge-manifest:
+    timeout-minutes: 8
     runs-on: ubuntu-latest
     permissions:
       contents: read
